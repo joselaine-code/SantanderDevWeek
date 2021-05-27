@@ -10,4 +10,5 @@
     <color name="redPrimary">#CD0001</color>
     <color name="redSecundary">#9d0808</color>
     <color name="cinzaIcon">#616161</color>
+    <color name="grey">#9C9C9C</color>
 </resources>

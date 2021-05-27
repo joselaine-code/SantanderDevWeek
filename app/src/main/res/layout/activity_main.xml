@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_saldo"
+                android:src="@drawable/update_black"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,7 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:src="@drawable/ic_expand_less"
+                android:src="@drawable/expand_less"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iv_saldo" />
 
@@ -121,7 +121,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:text="R$ 1.324,64"
-                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/iv_saldo"
@@ -180,7 +179,9 @@
         android:layout_marginRight="10dp"
         app:layout_constraintEnd_toStartOf="@+id/mcv_transferir"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_conta">
+        app:layout_constraintTop_toBottomOf="@id/card_conta"
+        android:clickable="true"
+        app:cardCornerRadius="20dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -195,12 +196,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.32" />
+                app:layout_constraintVertical_bias="0.4" />
 
             <TextView
                 android:id="@+id/tv_pagar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:gravity="center_horizontal"
                 android:text="@string/txt_pagar"
                 app:layout_constraintTop_toBottomOf="@id/iv_pagar"
@@ -218,7 +220,9 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toEndOf="@+id/mcv_pagar"
-        app:layout_constraintTop_toBottomOf="@id/card_conta">
+        app:layout_constraintTop_toBottomOf="@id/card_conta"
+        android:clickable="true"
+        app:cardCornerRadius="20dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -233,14 +237,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.32" />
+                app:layout_constraintVertical_bias="0.4" />
 
             <TextView
                 android:id="@+id/tv_transferir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:gravity="center_horizontal"
-                android:text="Transferir"
+                android:text="@string/transferir"
                 app:layout_constraintTop_toBottomOf="@id/iv_transferir"
                 tools:layout_editor_absoluteX="0dp" />
 
@@ -256,7 +261,9 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toEndOf="@+id/mcv_transferir"
-        app:layout_constraintTop_toBottomOf="@id/card_conta">
+        app:layout_constraintTop_toBottomOf="@id/card_conta"
+        android:clickable="true"
+        app:cardCornerRadius="20dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -271,12 +278,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.32" />
+                app:layout_constraintVertical_bias="0.4" />
 
             <TextView
                 android:id="@+id/tv_recarga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:gravity="center_horizontal"
                 android:text="@string/txt_recarga"
                 app:layout_constraintTop_toBottomOf="@id/iv_recarga"
@@ -310,6 +318,7 @@
         android:layout_marginLeft="16dp" />
 
     <TextView
+        android:id="@+id/tv_numeroCartao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1708"
