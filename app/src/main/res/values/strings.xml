@@ -7,4 +7,7 @@
     <string name="txt_recarga">Recarga</string>
     <string name="txt_cartaofinal">Cartão Final</string>
     <string name="transferir">Transferir</string>
+    <string name="long_message">Você aceita receber as nossas novidades em seu celular?</string>
+    <string name="decline">Não</string>
+    <string name="accept">Sim</string>
 </resources>
