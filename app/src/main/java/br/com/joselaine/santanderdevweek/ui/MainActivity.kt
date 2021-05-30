@@ -1,8 +1,12 @@
 package br.com.joselaine.santanderdevweek.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -49,6 +53,15 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.item_1 -> {
+                Toast.makeText(applicationContext, "Notificação ativada", Toast.LENGTH_LONG).show()
+                true
+            }
+            else -> false
+        }
+    }
 }
 
 fun Double.formatarValor(): String {

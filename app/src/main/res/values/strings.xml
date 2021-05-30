@@ -7,4 +7,7 @@
     <string name="txt_recarga">Recarga</string>
     <string name="txt_cartaofinal">Cartão Final</string>
     <string name="transferir">Transferir</string>
+    <string name="investimento">Investimento</string>
+    <string name="pix">Pix</string>
+    <string name="emprestimo">Empréstimo</string>
 </resources>

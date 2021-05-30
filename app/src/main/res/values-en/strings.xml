@@ -8,4 +8,7 @@
     <string name="txt_recarga">Recharge</string>
     <string name="txt_cartaofinal">Final card</string>
     <string name="transferir">Transfer</string>
+    <string name="investimento">Investments</string>
+    <string name="pix">Pix</string>
+    <string name="emprestimo">Lending</string>
 </resources>
