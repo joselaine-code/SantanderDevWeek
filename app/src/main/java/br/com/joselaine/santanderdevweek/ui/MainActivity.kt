@@ -1,13 +1,12 @@
 package br.com.joselaine.santanderdevweek.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import br.com.joselaine.santanderdevweek.R
@@ -22,7 +21,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        toolbar.setNavigationIcon(R.drawable.ic_menu)
+        toolbar.setNavigationOnClickListener { Toast.makeText(applicationContext, "Click Menu", Toast.LENGTH_SHORT).show() }
         supportActionBar?.setDisplayShowTitleEnabled(false)
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         buscarContaCliente()
@@ -62,6 +64,7 @@ class MainActivity : AppCompatActivity() {
             else -> false
         }
     }
+
 }
 
 fun Double.formatarValor(): String {
